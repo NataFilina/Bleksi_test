@@ -8,7 +8,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   List quiz = [];
   List answers = [];
   List random = [];
@@ -87,6 +86,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
         backgroundColor: Colors.yellow[200],
         appBar: AppBar(
+          shadowColor: Colors.lightBlue,
           title: const Text('Quiz'),
           centerTitle: true,
         ),
@@ -119,9 +119,9 @@ class _HomeState extends State<Home> {
                           answers.removeAt(index);
                           random.removeAt(index);
                         },),
-                      ]),
-              ));
-            })
+                      ])
+              ),);
+            }),
     );
   }
 }
